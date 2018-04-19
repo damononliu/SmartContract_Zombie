@@ -6,7 +6,8 @@ import "./safemath.sol";
 contract ZombieFactory is Ownable {
 
   using SafeMath for uint256;
-
+  
+  //事件需要消耗gas，注册事件的目的是用于前端监听，从而实时更新前端
   event NewZombie(uint zombieId, string name, uint dna);
 
   uint dnaDigits = 16;
